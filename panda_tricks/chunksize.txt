@@ -1,0 +1,10 @@
+df_reader = pd.read_csv(r'C:\Users\ryanchia\Downloads\filename.csv',
+             chunksize = 1000000, 
+             low_memory = False, 
+             error_bad_lines = False, 
+             header = None) 
+
+data = pd.DataFrame()
+
+for each_chunk in df_reader: 
+    data = data.append (each_chunk)
