@@ -1,0 +1,8 @@
+import pandas as pd
+
+df_1  = pd.DataFrame(index = pd.date_range(start='1/1/2018', periods=24, freq='M'))
+
+random_data  = np.random.randint(800,1000, size=(1,24))[0]  
+df_1['exposure'] = random_data
+
+df_1
