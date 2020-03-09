@@ -15,8 +15,10 @@ dataframes = [pd.read_csv(f) for f in filenames]
 import pandas as pd
 from glob import glob 
 
-filenames = glob ('sales*.csv') 
-dataframes = [pd.read_csv(f) for f in filenames] 
+filenames = glob ('../datasets/..sales*.csv') 
+## dataframes = [pd.read_csv(f, low_memory = False) for f in filenames] 
+
+dataframes = [pd.read_csv(f) for f in filenames] ## for simple access 
 
 df = pd.concat(dataframes).reset_index(drop = True ) # <---- ryan 
 
