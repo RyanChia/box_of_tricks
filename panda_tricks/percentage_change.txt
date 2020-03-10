@@ -1,0 +1,1 @@
+df['sum_delta'] = df['sum'].pct_change()*100
