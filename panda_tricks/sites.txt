@@ -1,1 +1,2 @@
 https://towardsdatascience.com/data-visualization-using-matplotlib-16f1aae5ce70
+https://www.datacamp.com/community/tutorials/moving-averages-in-pandas
