@@ -1,0 +1,11 @@
+https://stackoverflow.com/questions/42339876/error-unicodedecodeerror-utf-8-codec-cant-decode-byte-0xff-in-position-0-in
+
+df_reader = pd.read_csv('filename.txt',   
+                        chunksize = 1000000, sep = '~',  #or use | 
+                        low_memory = False, 
+                        encoding = 'utf-16' )   #or use ISO-8859-1
+
+data_1 = pd.DataFrame()
+
+for each_chunk in df_reader:
+    data_1 = data_1.append(each_chunk)
