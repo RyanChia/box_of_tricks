@@ -3,7 +3,7 @@ https://stackoverflow.com/questions/42339876/error-unicodedecodeerror-utf-8-code
 df_reader = pd.read_csv('filename.txt',   
                         chunksize = 1000000, sep = '~',  #or use | 
                         low_memory = False, 
-                        encoding = 'utf-16' )   #or use ISO-8859-1
+                        encoding = 'utf-16' )   #or use ISO-8859-1 , error_bad_lines=False)
 
 data_1 = pd.DataFrame()
 
