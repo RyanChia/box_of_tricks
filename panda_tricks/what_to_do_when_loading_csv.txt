@@ -1,3 +1,9 @@
 df = pd.read_csv('filename.txt', low_memory = False,sep = '~', error_bad_lines=False )
 #try sep ='|' 
 #try inserting error_bad_lines 
+
+
+# = = = = = = = 
+## How to get rid of “Unnamed: 0” column in a pandas DataFrame?
+
+df_1 = pd.read_csv('filename.csv', index_col = 0)
