@@ -1,0 +1,8 @@
+df = pd.read_csv('MRTSSM4453USN.csv', low_memory=False, ) # index_col=['DATE']
+
+df = df.rename(columns = {'DATE':'date','MRTSSM4453USN':'price'})
+df['price'] = df['price'].astype(float)
+df['date'] = pd.to_datetime(df['date']) #where is the F? 
+df = df.set_index(df['date'])
+df = df[['price']].copy()
+df.head()
